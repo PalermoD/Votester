@@ -1,28 +1,13 @@
-== README
+== VOTESTER README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a rails social aplication for upvoting and downvoting photos
 
-Things you may want to cover:
+Using postgresql as a relational database 
 
-* Ruby version
+Twitter Boostrap for responsive web design 
 
-* System dependencies
+Hand built authentication system will add Oauth in later update
 
-* Configuration
+Test-Unit for test suite 
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Heroku for production 
