@@ -1,0 +1,115 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome";
+
+
+/* universal */
+section {
+	overflow: auto;
+}
+
+textarea {
+	resize: vertical;
+}
+
+.center {
+	text-align: center;
+}
+
+.center h1 {
+	margin-bottom: 10px;
+}
+
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+	line-height: 1;
+}
+
+h1 {
+
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-weight: 900;
+	font-size: 3em;
+	margin-bottom: 30px;
+	text-align: center;
+	color:white;
+}
+
+h2 {
+	font-size: 1.2em;
+	letter-spacing: -1px;
+	margin-bottom: 20px;
+	text-align: center;
+	font-weight: normal;
+	color: #777;
+}
+
+p {
+	font-size: 1.1em;
+	line-height: 1.7em;
+}
+
+
+/*home msg*/
+
+.home-msg {
+	text-align: center;
+}
+
+
+/* header */
+
+#logo {
+	float: left;
+	margin-right: 10px;
+	font-size: 1.7em;
+	color: white;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+	padding-top: 9px;
+	font-weight: bold;
+}
+
+#logo:hover {
+	color: #fff;
+	text-decoration: none;
+}
+
+
+.navbar-inverse {
+	background-color: rgba(34, 34, 34, 0);
+	border-color: rgba(34, 34, 34, 0); 
+}
+a {
+	color:black !important;
+}
+
+a:hover {
+	color: black !important;
+	text-decoration: none;
+}
+
+#signup {
+	background: black;
+	color: white;
+	font-size: 22px;
+	font-weight: 300;
+	padding: 10px;
+	border: none;
+	border-radius: 10px;
+}
+
+
+.btn-info {
+	background-color: black !important;
+	border-color: white !important;
+}
+
+/*pop up log in and sign up boxes */
+
+.modal-content {
+	margin-top:25%;
+	height:400px;
+
+}
