@@ -118,3 +118,18 @@ i {
 	font-size: 30px !important;
 	margin-top: 10px !important;
 }
+
+input, textarea, select, .uneditable-input {
+	border: 1px solid #bbb;
+	width: 100%;
+	margin-bottom: 15px;
+	
+}
+input {
+	height: auto !important;
+}
+.sign {
+	width: 60%;
+	text-align: center;
+	margin: auto;
+}
