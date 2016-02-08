@@ -45,7 +45,7 @@ h1 {
 	font-size: 3em;
 	margin-bottom: 30px;
 	text-align: center;
-	color:white;
+	color:black;
 }
 
 h2 {
@@ -155,4 +155,10 @@ input {
   width: 100%;
   margin-top: 545px;
   @include box_sizing;
+}
+
+/*user image*/
+
+.gravatar {
+	border-radius: 50%;
 }
