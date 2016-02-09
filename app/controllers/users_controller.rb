@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   
   def show
    @user = User.find(params[:id]) 
-
+   @posts = @user.posts.paginate(page: params[:page])
   end 
 
 
@@ -47,14 +47,6 @@ class UsersController < ApplicationController
 
     def user_edit_params 
     	params.require(:user).permit(:name, :email, :location, :bio)
-    end 
-
-    def logged_in_user
-    	unless logged_in?
-    		store_location
-    		flash[:danger] = "Please log in"
-    		redirect_to login_url 
-    	end
     end 
 
     def correct_user

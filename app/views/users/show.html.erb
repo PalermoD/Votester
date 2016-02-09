@@ -1,18 +1,27 @@
 <% provide(:title, @user.name) %>
 <div class="row">
-  
-    <section class="user_info col-md-8 col-md-offset-2">
-      <h3 class="location">
-      	<%= @user.location %>
-      </h3>
-      <h1>
-        <%= gravatar_for @user %>
-        <%= @user.name %>
-      </h1>
-      <p class="bio">
-      	<%= @user.bio %>
-      </p>
-      
-    </section>
-  
+
+	<section class="user_info col-md-8 col-md-offset-2">
+		<h3 class="location">
+			<%= @user.location %>
+		</h3>
+		<h1>
+			<%= gravatar_for @user %>
+			<%= @user.name %>
+		</h1>
+		<p class="bio">
+			<%= @user.bio %>
+		</p>
+
+	</section>
+	<div class="col-md-8 col-md-offset-2">
+		<% if @user.posts.any? %>
+		  <h3>posts (<%= @user.posts.count %>)</h3>
+		  <ol class="microposts">
+			  <%= render @posts %>
+		  </ol>
+		  <%= will_paginate @posts %>
+		<% end %>
+	</div>
+
 </div>
