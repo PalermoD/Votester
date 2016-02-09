@@ -145,6 +145,8 @@ input {
 	text-align: center;
 	margin: auto;
 	margin-bottom: 20px;
+	padding-left: 40px;
+	padding-right: 40px;
 }
 
 
@@ -195,4 +197,23 @@ input {
 .btn-primary {
 	background-color: #3FBD35;
 	border-color:#3FBD35;
+}
+
+.btn-primary:hover {
+	background-color: #3FBD35;
+	border-color: red;
+}
+
+.location {
+	text-align: center;
+	color: white;
+	background-color: black;
+	padding: 6px;
+}
+
+
+.bio {
+	text-align: center;
+	font-size: 20px;
+	border-style: solid; 
 }

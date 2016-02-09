@@ -5,7 +5,7 @@
       <ul class="nav navbar-nav navbar-right" style="margin-top:-30px">
         <% if logged_in? %>
           <li><%= link_to "Profile", current_user %></li>
-          <li><%= link_to "Settings", '#' %></li>
+          <li><%= link_to "Settings", edit_user_path(current_user) %></li>
           <li><%= link_to "logout", logout_path, method: "delete" %></li>
         <% else %>
           <li><%= link_to "Log in", '#',  "data-target" => "#myModal2", "data-toggle" => "modal", "type" => "button"  %></li>
