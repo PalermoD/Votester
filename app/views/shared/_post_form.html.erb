@@ -1,13 +1,17 @@
 
 	<div class="col-md-8 col-md-offset-2">
 
-		<%= form_for(@post) do |f| %>
+		<%= form_for(@post, html: { multipart: true }) do |f| %>
 		<%= render 'shared/error_messages'%>
 		<%= render 'shared/post_errors'%>
 
-		<%= f.text_field :content, placeholder: "Compose new post...", class: 'form-control'%>
+		<%= f.text_field :content, placeholder: "Title of Image", class: 'form-control'%>
+		<span class="picture">
+          <%= f.file_field :picture %>
+        </span>
 
 		<%= f.submit "Post", class: "btn btn-primary" %>
+		
 		<% end %>
 	</div>
 

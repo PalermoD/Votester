@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
 	validates :password, presence: true, length: { minimum: 6 }, on: :create
 
 	def feed
-		Post.where("user_id = ?", id)
+	   Post.all
 	end
 	
 end 

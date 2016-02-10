@@ -1,4 +1,9 @@
-<li>
+<% provide(:title, 'All users') %>
+<h1>All Posts</h1>
+
+<ul class="users">
+  <% @posts.each do |post| %>
+    <li>
 	<h3 class="location">
 		<%= post.user.location %>
 	</h3>
@@ -24,5 +29,7 @@
 	<% end %>
 
 </li>
+  <% end %>
+</ul>
 
 

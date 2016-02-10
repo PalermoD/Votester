@@ -31,4 +31,9 @@ module SessionsHelper
         session[:forwarding_url] = request.url if request.get?
     end
 
+    def private_user
+      @user = User.find(params[:id])
+      
+    end
+
 end

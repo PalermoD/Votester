@@ -6,10 +6,18 @@ class PostsController < ApplicationController
 	  @post = Post.new 
 	end 
 
+	def index
+      @posts = Post.all
+    end
+
+    def show
+    	@user = User.find(params[:id]) 
+    end 
+
 	def create
        @post = current_user.posts.build(post_params)
        if @post.save
-       	flash[:success] = "Micropost created!"
+       	flash[:success] = "post created!"
        	redirect_to root_url
        else
        	@feed_items = []
@@ -26,12 +34,19 @@ class PostsController < ApplicationController
     private 
 
       def post_params
-      	params.require(:post).permit(:content)
+      	params.require(:post).permit(:content, :picture)
       end
 
       def correct_user
          @post = current_user.posts.find_by(id: params[:id])
          redirect_to root_url if @post.nil?
       end
+
+      # Validates the size of an uploaded picture.
+    def picture_size
+      if picture.size > 10.megabytes
+        errors.add(:picture, "should be less than 5MB")
+      end
+    end
 
 end
