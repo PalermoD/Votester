@@ -3,6 +3,7 @@
 
 		<%= form_for(@post) do |f| %>
 		<%= render 'shared/error_messages'%>
+		<%= render 'shared/post_errors'%>
 
 		<%= f.text_field :content, placeholder: "Compose new post...", class: 'form-control'%>
 

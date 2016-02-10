@@ -1,4 +1,7 @@
 <li>
+  <h3 class="location">
+	<%= current_user.location %>
+  </h3>
   
   <h1>
   	<%= link_to gravatar_for(post.user), post.user %>
@@ -13,6 +16,11 @@
   <h2>
   	Posted <%= time_ago_in_words(post.created_at) %> ago.
   </h2>
+  <% if current_user?(post.user) %>
+     <h2> <%= link_to "delete", post, method: :delete,
+                                       data: { confirm: "You sure?" }, class: 'delete_post' %></h2>
+<% end %>
   
 </li>
+
 

@@ -1,0 +1,10 @@
+<section class="col-md-8 col-md-offset-2">
+<% if @feed_items.any? %>
+  <ol class="microposts">
+    <%= render @feed_items %>
+  </ol>
+  <%= will_paginate @feed_items %>
+<% end %>
+</section>
+
+

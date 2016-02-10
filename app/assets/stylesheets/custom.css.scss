@@ -230,12 +230,15 @@ ol {
 }
 
 .user_post_name {
-	background-color: black;
-	color: white !important;
+	
 	text-align: center;
 	padding: 6px;
 }
 
 .user_post_name:hover {
 	color: green !important;
+}
+
+.delete_post {
+	color: red !important;
 }
