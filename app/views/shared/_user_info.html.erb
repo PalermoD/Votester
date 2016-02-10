@@ -1,0 +1,9 @@
+<section class="user_info col-md-8 col-md-offset-2">
+		<h3 class="location">
+			<%= current_user.location %>
+		</h3>
+		<h1>
+			<%= gravatar_for current_user %>
+			<%= current_user.name %>
+		</h1>
+</section>

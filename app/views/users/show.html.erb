@@ -14,14 +14,26 @@
 		</p>
 
 	</section>
-	<div class="col-md-8 col-md-offset-2">
+
+	<% if logged_in? %>
+    
+	
+		<section >
+			<%= render 'shared/post_form' %>
+		</section>
+	
+	
+	<% else %>
+	<% end %>
+
+	<section class="col-md-8 col-md-offset-2">
 		<% if @user.posts.any? %>
-		  <h3>posts (<%= @user.posts.count %>)</h3>
-		  <ol class="microposts">
+		  
+		  <ol>
 			  <%= render @posts %>
 		  </ol>
 		  <%= will_paginate @posts %>
 		<% end %>
-	</div>
+	</section>
 
 </div>
