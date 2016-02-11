@@ -13,7 +13,7 @@
 
 	</p>
 
-	<h1><%= image_tag post.picture.url if post.picture? %></h1>
+	<h1><%= image_tag post.picture.url, :class => 'img-responsive img-post' if post.picture? %></h1>
 
 	<h2>
 		Posted <%= time_ago_in_words(post.created_at) %> ago.
@@ -22,8 +22,6 @@
 	    <h2 > <%= link_to "delete", post, method: :delete,
 	    data: { confirm: "You sure?" }, class: 'delete_post' %></h2>
 	<% end %>
-  
-
 </li>
 
 
