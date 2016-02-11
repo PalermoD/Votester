@@ -81,6 +81,7 @@ p {
 	letter-spacing: -1px;
 	padding-top: 9px;
 	font-weight: bold;
+	margin-left:15px;
 }
 
 #logo:hover {
@@ -249,4 +250,9 @@ ol {
 
 .icon-bar {
 	background-color: black !important;
+}
+
+.navbar-nav {
+	background-color: white;
+    border-bottom: solid;
 }
