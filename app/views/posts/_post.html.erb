@@ -1,5 +1,5 @@
-<li>
-	<h3 class="location">
+<li style="margin-top:20px;">
+	<h3 class="location" >
 		<%= post.user.location %>
 	</h3>
 
@@ -19,10 +19,22 @@
 		Posted <%= time_ago_in_words(post.created_at) %> ago.
 	</h2>
 	<% if current_user?(post.user) %>
-	    <h2> <%= link_to "delete", post, method: :delete,
+	    <h2 > <%= link_to "delete", post, method: :delete,
 	    data: { confirm: "You sure?" }, class: 'delete_post' %></h2>
 	<% end %>
+  
 
 </li>
+
+
+
+   <li>
+    <h1 >
+	  <button class="col-md-6 fa fa-caret-square-o-up" style="color:white; background-color:green; padding:5px; margin-bottom:20px;">UPVOTE</button>
+	  <button class="col-md-6 fa fa-caret-square-o-down" style="color:white; background-color:red; padding:5px; margin-bottom:20px;">DOWNVOTE</button>
+	</h1>
+	</li>
+
+	<hr>
 
 
