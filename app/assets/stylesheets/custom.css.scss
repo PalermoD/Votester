@@ -271,3 +271,33 @@ nav.share iframe {border:0; margin-top:0; padding-top:0;} /* if using medium siz
 .fb-like{display:inline-block}
 * html .fb-like{display:inline}/* ie6 inline block fix*/
 *+html .fb-like{display:inline}/* ie7 inline block fix*/
+
+.upvote {
+	background-color: green;
+	color: white !important;
+	font-size: 30px;
+	padding: 8px;
+}
+
+.downvote {
+	background-color: red;
+	color: white !important;
+	font-size: 30px;
+	padding: 8px;
+}
+
+.upvote a {
+	font-size: 30px;
+	color: white !important;
+	font-family: Helvetica;
+	font-weight: 900;
+	padding: 8px;
+}
+
+.downvote a {
+	font-size: 30px;
+	color: white !important;
+	font-family: Helvetica;
+	font-weight: 900;
+	padding: 8px;
+}
