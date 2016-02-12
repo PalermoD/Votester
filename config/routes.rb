@@ -10,6 +10,11 @@ Rails.application.routes.draw do
   delete 'logout' => 'sessions#destroy'
   
   resources :users
-  resources :posts
- 
+  resources :posts do 
+    member do
+      get "like" => "posts#upvote"
+      get "dislike" => "posts#downvote"
+    end
+  end
+  
 end

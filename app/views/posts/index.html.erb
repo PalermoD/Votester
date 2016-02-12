@@ -23,6 +23,17 @@
 	<h2>
 		Posted <%= time_ago_in_words(post.created_at) %> ago.
 	</h2>
+
+	<%= link_to like_post_path(@post), method: :put do %>
+  Upvote
+  <%= post.get_upvotes.size %>
+<% end %>
+
+<%= link_to dislike_post_path(@post), method: :put do %>
+  Downvote
+  <%= post.get_downvotes.size %>
+
+<% end %>
 	<% if current_user?(post.user) %>
 	    <h2> <%= link_to "delete", post, method: :delete,
 	    data: { confirm: "You sure?" }, class: 'delete_post' %></h2>

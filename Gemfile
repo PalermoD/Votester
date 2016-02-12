@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 
-source 'https://rubygems.org'
+
 
 gem 'rails',        '4.2.4'
 gem 'bcrypt'
@@ -20,8 +20,8 @@ gem 'jbuilder',     '2.2.3'
 gem 'sdoc',         '0.4.0', group: :doc
 gem "font-awesome-rails"
 gem 'shareable'
-gem 'social-share-button'
-
+gem 'social-share-button', '~> 0.1.8', git: 'https://github.com/cuterxy/social-share-button.git'
+gem 'acts_as_votable', '~> 0.10.0'
 group :development, :test do
   gem 'sqlite3',     '1.3.9'
   gem 'byebug',      '3.4.0'
