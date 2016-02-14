@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+mount Commontator::Engine => '/commontator'
+
   get 'sessions/new'
 
   root 'static_pages#home'
@@ -18,4 +20,5 @@ Rails.application.routes.draw do
     end
   end
   
+ \
 end

@@ -1,8 +1,5 @@
 source 'https://rubygems.org'
 
-
-
-
 gem 'rails',        '4.2.4'
 gem 'bcrypt'
 gem 'bootstrap-sass',       '3.2.0.0'
@@ -22,6 +19,10 @@ gem "font-awesome-rails"
 gem 'shareable'
 gem 'social-share-button', '~> 0.1.8', git: 'https://github.com/cuterxy/social-share-button.git'
 gem 'acts_as_votable', '~> 0.10.0'
+
+gem 'commontator'
+gem 'active_model_serializers'
+
 group :development, :test do
   gem 'sqlite3',     '1.3.9'
   gem 'byebug',      '3.4.0'

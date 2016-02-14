@@ -29,6 +29,8 @@ GEM
       erubis (~> 2.7.0)
       rails-dom-testing (~> 1.0, >= 1.0.5)
       rails-html-sanitizer (~> 1.0, >= 1.0.2)
+    active_model_serializers (0.9.0)
+      activemodel (>= 3.2)
     activejob (4.2.4)
       activesupport (= 4.2.4)
       globalid (>= 0.3.0)
@@ -76,6 +78,9 @@ GEM
       execjs
     coffee-script-source (1.10.0)
     columnize (0.9.0)
+    commontator (4.11.1)
+      jquery-rails
+      rails (>= 3.1)
     concurrent-ruby (1.0.0)
     debug_inspector (0.0.2)
     debugger-linecache (1.2.0)
@@ -345,6 +350,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_model_serializers
   acts_as_votable (~> 0.10.0)
   bcrypt
   bootstrap-sass (= 3.2.0.0)
@@ -352,6 +358,7 @@ DEPENDENCIES
   byebug (= 3.4.0)
   carrierwave (= 0.10.0)
   coffee-rails (= 4.1.0)
+  commontator
   fog (= 1.36.0)
   font-awesome-rails
   guard-minitest (= 2.3.1)

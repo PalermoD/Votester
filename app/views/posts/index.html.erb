@@ -3,6 +3,7 @@
 
 <ul class="users">
   <% @posts.each do |post| %>
+  
     <li>
 	<h3 class="location">
 		<%= post.user.location %>
@@ -24,14 +25,7 @@
 		Posted <%= time_ago_in_words(post.created_at) %> ago.
 	</h2>
 
-	<%= link_to like_post_path(@post), method: :put do %>
-  Upvote
-  <%= post.get_upvotes.size %>
-<% end %>
 
-<%= link_to dislike_post_path(@post), method: :put do %>
-  Downvote
-  <%= post.get_downvotes.size %>
 
 <% end %>
 	<% if current_user?(post.user) %>
