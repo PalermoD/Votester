@@ -1,0 +1,54 @@
+<li class="bio col-md-12"style="margin-top:20px">
+ 
+	<h3 class="location" >
+		<%= @post.user.location %>
+	</h3>
+
+
+
+	<h1>
+		<%= link_to gravatar_for(@post.user), @post.user %>
+		<%= link_to @post.user.name, @post.user, class: 'user_post_name' %>
+	</h1>
+
+	<p class="bio">
+		<%= @post.content %>
+
+	</p>
+
+
+
+	<h1><%= image_tag @post.picture.url, :class => 'img-responsive img-post' if @post.picture? %></h1>
+
+	<h2>
+		Posted <%= time_ago_in_words(@post.created_at) %> ago.
+	</h2>
+
+	
+
+	<div class="col-md-12">
+		<h2 class="fa fa-caret-square-o-up col-md-6 col-xs-6 upvote">
+			<%= link_to like_post_path(@post), method: :get do %>
+
+			<%= @post.get_upvotes.size %>
+			<% end %>
+		</h2>
+
+		<h2 class="fa fa-caret-square-o-down col-md-6 col-xs-6 downvote">
+			<%= link_to dislike_post_path(@post), method: :get do %>
+
+			<%= @post.get_downvotes.size %>
+			<% end %>
+		</h2>
+	</div>
+
+
+
+
+	<% if current_user?(@post.user) %>
+	  <h2 > <%= link_to "delete", @post, method: :delete,
+	  data: { confirm: "You sure?" }, class: 'delete_post' %></h2>
+	<% end %>
+
+	
+</li>

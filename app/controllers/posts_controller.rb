@@ -12,10 +12,9 @@ class PostsController < ApplicationController
       
   end
 
-    def show
-    	@user = User.find(params[:id]) 
-      
-    end 
+  def show
+   @post = Post.find(params[:id]) 
+  end 
 
 	def create
        @post = current_user.posts.build(post_params)
