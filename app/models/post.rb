@@ -3,9 +3,9 @@ class Post < ActiveRecord::Base
   belongs_to :user
   has_many :comments, dependent: :destroy
   acts_as_votable
-  acts_as_commontable
+  
 
-  default_scope -> {  order(:cached_votes_up => :desc)}
+  default_scope -> {  order(:cached_votes_score => :desc)}
   mount_uploader :picture, PictureUploader
   validates :user_id, presence: true 
   validates :content, presence: true, length: { maximum: 140 }
