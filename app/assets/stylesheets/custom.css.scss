@@ -209,8 +209,9 @@ input {
 .location {
 	text-align: center;
 	color: white;
-	background-color: black;
+	background-color:#333333;
 	padding: 6px;
+	border-radius: 10px;
 }
 
 
@@ -218,6 +219,21 @@ input {
 	text-align: center;
 	font-size: 20px;
 	border-style: solid; 
+	border-width: 1px;
+	border-radius: 10px;
+	background-color: white;
+	border-color: white;
+	
+}
+
+.post {
+	text-align: center;
+	font-size: 20px;
+	border-style: solid; 
+	border-width: 1px;
+	border-radius: 10px;
+	background-color: lightgray;
+	border-color: lightgray;
 }
 
 
