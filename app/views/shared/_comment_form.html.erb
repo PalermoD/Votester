@@ -1,0 +1,9 @@
+
+<%= form_for [@user, @post, @post.comments.new ] do |f| %>
+  
+  <div class="field">
+    <%= f.text_area :content, placeholder: "Say something about this post . . ." %>
+  </div>
+  <%= f.submit "Comment", class: "btn btn-primary" %>
+  
+  <% end %>

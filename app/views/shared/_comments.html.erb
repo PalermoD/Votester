@@ -1,0 +1,9 @@
+<% @post.comments.each do |comment| %>
+     <% if comment.user %>
+		<%= comment.user.name %>
+		<%= comment.content %>
+        
+
+<% end %>
+
+<% end %>

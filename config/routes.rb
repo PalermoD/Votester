@@ -14,11 +14,12 @@ mount Commontator::Engine => '/commontator'
   resources :users
   
   resources :posts do 
+    resources :comments 
     member do
       get "like", to: "posts#upvote"
       get "dislike", to: "posts#downvote"
     end
   end
   
- \
+  resources :comments
 end
