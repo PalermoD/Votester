@@ -1,4 +1,5 @@
-<li class="bio col-md-12"style="margin-top:20px">
+<div class="col-md-8 col-md-offset-2">
+<div class="post col-md-12"style="margin-top:20px">
  
 	<h3 class="location" >
 		<%= @post.user.location %>
@@ -11,7 +12,7 @@
 		<%= link_to @post.user.name, @post.user, class: 'user_post_name' %>
 	</h1>
 
-	<p class="bio">
+	<p class="location">
 		<%= @post.content %>
 
 	</p>
@@ -49,13 +50,14 @@
 	  <h2 > <%= link_to "delete", @post, method: :delete,
 	  data: { confirm: "You sure?" }, class: 'delete_post' %></h2>
 	<% end %>
-
-	
-</li>
-
-
-    
     <%= render 'shared/comment_form' %>
 
-     <%= render 'shared/comments' %>
+    <%= render 'shared/comments' %>
+	
+	
+</div>
+</div>
+
+    
+
 	

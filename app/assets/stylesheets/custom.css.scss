@@ -93,8 +93,16 @@ p {
 
 .navbar-inverse {
 	background-color: white;
-	border-color: rgba(34, 34, 34, 0); 
+	border-color: white;
+	
 }
+
+.navbar-collapse {
+	
+	border-color: white;
+	
+}
+
 a {
 	color:black !important;
 }
@@ -254,11 +262,11 @@ ol {
 }
 
 .user_post_name:hover {
-	color: green !important;
+	color: white !important;
 }
 
 .delete_post {
-	color: red !important;
+	color: #FF4343 !important;
 }
 
 .img-post {
@@ -271,7 +279,7 @@ ol {
 
 .navbar-nav {
 	background-color: white;
-    border-bottom: solid;
+    border-color: white;
 }
 
 .navbar-header {
@@ -289,17 +297,19 @@ nav.share iframe {border:0; margin-top:0; padding-top:0;} /* if using medium siz
 *+html .fb-like{display:inline}/* ie7 inline block fix*/
 
 .upvote {
-	background-color: green;
+	background-color:#3FBD35;
 	color: white !important;
 	font-size: 30px;
 	padding: 8px;
+	border-radius: 10px;
 }
 
 .downvote {
-	background-color: red;
+	background-color:#FF4343;
 	color: white !important;
 	font-size: 30px;
 	padding: 8px;
+	border-radius: 10px;
 }
 
 .upvote a {
@@ -308,6 +318,7 @@ nav.share iframe {border:0; margin-top:0; padding-top:0;} /* if using medium siz
 	font-family: Helvetica;
 	font-weight: 900;
 	padding: 8px;
+
 }
 
 .downvote a {
@@ -316,5 +327,9 @@ nav.share iframe {border:0; margin-top:0; padding-top:0;} /* if using medium siz
 	font-family: Helvetica;
 	font-weight: 900;
 	padding: 8px;
+}
+
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+    border-color: white;
 }
 

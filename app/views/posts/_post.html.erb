@@ -11,10 +11,9 @@
 		<%= link_to post.user.name, post.user, class: 'user_post_name' %>
 	</h1>
 
-	<p class="bio">
+	<p class="location">
 		<%= post.content %>
-
-	</p>
+    </p>
 
 
 
@@ -52,6 +51,6 @@
 
    
 
-	<h1><%= link_to 'Comments', post, class: 'user_post_name' %></h1>
+	<h2><%= link_to 'Comments', post, class: 'user_post_name' %></h2>
 </li>
 
