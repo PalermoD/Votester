@@ -22,6 +22,7 @@ gem 'acts_as_votable', '~> 0.10.0'
 
 gem 'commontator'
 gem 'active_model_serializers'
+gem 'aws-sdk'
 
 group :development, :test do
   gem 'sqlite3',     '1.3.9'
