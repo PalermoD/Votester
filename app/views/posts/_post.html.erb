@@ -29,15 +29,16 @@
 	<div class="col-md-12">
 		<h2 class="fa fa-caret-square-o-up col-md-6 col-xs-6 upvote">
 			<%= link_to like_post_path(post), method: :get do %>
-
+             upvote
 			<%= post.get_upvotes.size %>
 			<% end %>
 		</h2>
 
 		<h2 class="fa fa-caret-square-o-down col-md-6 col-xs-6 downvote">
 			<%= link_to dislike_post_path(post), method: :get do %>
-
+            downvote
 			<%= post.get_downvotes.size %>
+
 			<% end %>
 		</h2>
 	</div>
