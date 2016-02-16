@@ -37,6 +37,7 @@ textarea {
 
 h1, h2, h3, h4, h5, h6 {
 	line-height: 1;
+
 }
 
 h1 {
@@ -331,5 +332,9 @@ nav.share iframe {border:0; margin-top:0; padding-top:0;} /* if using medium siz
 
 .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
     border-color: white;
+}
+
+.comment-btn {
+	margin-bottom: 20px;
 }
 
