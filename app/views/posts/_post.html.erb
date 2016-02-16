@@ -1,5 +1,5 @@
 <li class="post col-md-12"style="margin-top:20px">
- 
+
 	<h3 class="location" >
 		<%= post.user.location %>
 	</h3>
@@ -13,11 +13,12 @@
 
 	<p class="location">
 		<%= post.content %>
-    </p>
+	</p>
 
 
 
-	<h1><%= image_tag post.picture.url, :class => 'img-responsive img-post' if post.picture? %></h1>
+	<h1><%= image_tag post.picture.url, :class => 'img-responsive img-post' if post.picture? %>
+	</h1>
 
 	<h2>
 		Posted <%= time_ago_in_words(post.created_at) %> ago.
@@ -42,15 +43,13 @@
 	</div>
 
 
+	<h2><%= link_to 'comments', post, class: 'user_post_name' %></h2>
 
-
-	<% if current_user?(post.user) %>
+    <% if current_user?(post.user) %>
 	  <h2 > <%= link_to "delete", post, method: :delete,
-	  data: { confirm: "You sure?" }, class: 'delete_post' %></h2>
+	        data: { confirm: "You sure?" }, class: 'delete_post' %>
+	  </h2>
 	<% end %>
 
-   
-
-	<h2><%= link_to 'comments', post, class: 'user_post_name' %></h2>
 </li>
 
