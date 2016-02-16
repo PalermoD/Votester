@@ -12,6 +12,12 @@
      	<div class='row'>
      		<p ><%= comment.content %></p>
      	</div>
+
+          <% if current_user?(comment.user) %>
+            <h2 > <%= link_to "delete comment", [comment.post, comment], method: :delete,
+               data: { confirm: "You sure?" }, class: 'delete_post' %>
+            </h2>
+          <% end %>
      	
      </div>
         
