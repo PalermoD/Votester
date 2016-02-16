@@ -1,9 +1,21 @@
 <% @post.comments.each do |comment| %>
      <% if comment.user %>
-		<%= comment.user.name %>
-		<%= comment.content %>
+     <div class="location" style="margin-bottom:20px;">
+     	
+     	<div class='row post_user_name'>
+     		<h2 style='float:left' >
+     			<%= link_to gravatar_for(comment.user), comment.user, class: 'user_post_name' %>
+     			<%= comment.user.name %>
+     		</h2>
+     	</div>
+
+     	<div class='row'>
+     		<p ><%= comment.content %></p>
+     	</div>
+     	
+     </div>
         
-
+		
+    <% end %>
 <% end %>
 
-<% end %>
