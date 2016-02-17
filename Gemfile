@@ -23,6 +23,7 @@ gem 'acts_as_votable', '~> 0.10.0'
 gem 'commontator'
 gem 'active_model_serializers'
 gem 'figaro'
+gem 'jquery-smooth-scroll-rails'
 
 
 group :development, :test do
@@ -44,8 +45,5 @@ group :production do
   gem 'puma',           '2.11.1'
 end
 
-group :assets do
-  
-  gem 'jquery-smooth-scroll-rails', :git => 'git@github.com:gretel/jquery-smooth-scroll-rails.git'
-end
+
 
