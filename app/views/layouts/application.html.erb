@@ -14,29 +14,7 @@
      <script src='//cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/utils/Draggable.min.js'></script>
   </head>
   <body>
-    <script>
-    if (window.addEventListener) window.addEventListener('DOMMouseScroll', wheel, false);
-    window.onmousewheel = document.onmousewheel = wheel;
 
-    function wheel(event) {
-      var delta = 0;
-      if (event.wheelDelta) delta = event.wheelDelta / 120;
-      else if (event.detail) delta = -event.detail / 3;
-
-      handle(delta);
-      if (event.preventDefault) event.preventDefault();
-      event.returnValue = false;
-    }
-
-    function handle(delta) {
-      var time = 1000;
-      var distance = 300;
-
-      $('html, body, .container').stop().animate({
-        scrollTop: $(window).scrollTop() - (distance * delta)
-      }, time );
-    }
-    </script>
 
 <script>
   !function(g,s,q,r,d){r=g[r]=g[r]||function(){(r.q=r.q||[]).push(

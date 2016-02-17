@@ -24,6 +24,7 @@ gem 'commontator'
 gem 'active_model_serializers'
 gem 'figaro'
 gem 'jquery-smooth-scroll-rails'
+gem 'perfect-scrollbar-rails'
 
 
 group :development, :test do

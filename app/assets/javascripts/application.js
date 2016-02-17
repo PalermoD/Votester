@@ -17,3 +17,4 @@
 //= require jquery
 //= require bootstrap-sprockets
 //= require social-share-button
+//= require perfect-scrollbar
