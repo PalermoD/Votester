@@ -1,0 +1,3 @@
+$('.npos').bind('ajax:success', function() {
+ $('.vcount-<%= @post.id %>').html('<%=escape_javascript @post.get_upvotes.size.to_s %>');
+});

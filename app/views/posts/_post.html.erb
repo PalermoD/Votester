@@ -26,18 +26,18 @@
 
 	
 
-	<div class="col-md-12">
+	<div class="col-md-12 vote-count bind-<%= entry.id %>">
 		<h2 class="fa fa-caret-square-o-up col-md-6 col-xs-6 upvote">
-			<%= link_to like_post_path(post), method: :get do %>
+			<%= link_to like_post_path(post), remote: true, method: :get, class: 'vpos' do %>
              upvote
-			<%= post.get_upvotes.size %>
+			 <span class="vcount-<%= post.id %>"><%= post.get_upvotes.size %></span>
 			<% end %>
 		</h2>
 
 		<h2 class="fa fa-caret-square-o-down col-md-6 col-xs-6 downvote">
-			<%= link_to dislike_post_path(post), method: :get do %>
+			<%= link_to dislike_post_path(post), remote: true, method: :get, class: 'npos' do%>
             downvote
-			<%= post.get_downvotes.size %>
+			<span class="vcount-<%= post.id %>"><%= post.get_downvotes.size %></span>
 
 			<% end %>
 		</h2>

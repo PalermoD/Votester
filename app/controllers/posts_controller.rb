@@ -36,17 +36,56 @@ class PostsController < ApplicationController
     end 
 
 
-    def upvote 
-       @post = Post.find(params[:id])
-       @post.upvote_by current_user
-       redirect_to :back
-    end  
+    # def upvote 
+    #    @post = Post.find(params[:id])
+    #    @post.upvote_by current_user
+    #    redirect_to :back
+    # end 
+
+    def upvote
+        @post = Post.find(params[:id])
+        respond_to do |format|
+        unless current_user.voted_for? @post
+          format.html { redirect_to :back }
+          format.json { head :no_content }
+          format.js { render :layout => false }
+          @post.vote_total = @post.vote_total + 1
+          @post.save
+          @post.upvote_by current_user
+        else
+          flash[:danger] = 'You allready voted this entry'
+          format.html { redirect_to :back }
+          format.json { head :no_content }
+          format.js
+        end
+      end
+    end 
+
 
     def downvote
-       @post = Post.find(params[:id])
-       @post.downvote_by current_user
-       redirect_to :back
-     end
+        @post = Post.find(params[:id])
+        respond_to do |format|
+        unless current_user.voted_for? @post
+          format.html { redirect_to :back }
+          format.json { head :no_content }
+          format.js { render :layout => false }
+          @post.vote_total = @post.vote_total + 1
+          @post.save
+          @post.upvote_by current_user
+        else
+          flash[:danger] = 'You allready voted this entry'
+          format.html { redirect_to :back }
+          format.json { head :no_content }
+          format.js
+        end
+      end
+    end 
+
+    # def downvote
+    #    @post = Post.find(params[:id])
+    #    @post.downvote_by current_user
+    #    redirect_to :back
+    #  end
 
     private 
 
