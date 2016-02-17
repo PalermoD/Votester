@@ -35,7 +35,7 @@ class UsersController < ApplicationController
   	  if @user.update_attributes(user_edit_params)
   	  	# handle succesful update
   	  	flash[:success] = "Profile updated"
-        redirect_to @user
+        redirect_to root_url
   	  else 
   	  	render 'edit'
   	  end 
