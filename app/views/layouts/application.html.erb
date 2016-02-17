@@ -17,11 +17,25 @@
 
     <script>
 
-       $(function() {
-    $('body').perfectScrollbar();
+     function changeSize() {
+    var width = parseInt($("#Width").val());
+    var height = parseInt($("#Height").val());
 
-   
-     });
+    $(".container").width(width).height(height);
+
+    // update scrollbars
+    $('.container').perfectScrollbar('update');
+
+    // or even with vanilla JS!
+    Ps.update(document.getElementById('Demo'));
+}
+
+$(function() {
+    $('.container').perfectScrollbar();
+
+    // with vanilla JS!
+    Ps.initialize(document.getElementById('Demo'));
+});
 
     </script>
 
