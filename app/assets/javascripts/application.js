@@ -17,4 +17,3 @@
 //= require jquery
 //= require bootstrap-sprockets
 //= require social-share-button
-//= require jquery-smooth-scroll
