@@ -43,3 +43,8 @@ group :production do
   gem 'puma',           '2.11.1'
 end
 
+group :assets do
+  
+  gem 'jquery-smooth-scroll-rails', :git => 'git@github.com:gretel/jquery-smooth-scroll-rails.git'
+end
+
