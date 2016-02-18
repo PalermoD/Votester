@@ -17,9 +17,9 @@
 
     <script>
 
-     function changeSize() {
-    var width = parseInt($("#Width").val());
-    var height = parseInt($("#Height").val());
+function changeSize() {
+    var width = parseInt($( window ).width().val());
+    var height = parseInt($( window ).height().val());
 
     $(".container").width(width).height(height);
 
