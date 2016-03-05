@@ -15,29 +15,7 @@
   </head>
   <body>
 
-    <script>
 
-function changeSize() {
-    var width = parseInt($( window ).width().val());
-    var height = parseInt($( window ).height().val());
-
-    $(".container").width(width).height(height);
-
-    // update scrollbars
-    $('.container').perfectScrollbar('update');
-
-    // or even with vanilla JS!
-    Ps.update(document.getElementById('Demo'));
-}
-
-$(function() {
-    $('.container').perfectScrollbar();
-
-    // with vanilla JS!
-    Ps.initialize(document.getElementById('Demo'));
-});
-
-    </script>
 
 
 <script>
